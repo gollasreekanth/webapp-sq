@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Scan') {
       steps {
-        withSonarQubeEnv(installationName: 'sonarjenkins') { 
+        withSonarQubeEnv(installationName: 'sonaradmin') { 
           sh './mvnw clean sonar:sonar'
         }
       }
